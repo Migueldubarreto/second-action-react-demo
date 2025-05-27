@@ -1,6 +1,6 @@
 name: Test unit test
 on: push 
-# On this way the jobs run in parallel
+# With needs forces to run one other the other one
 jobs:
   test: 
     runs-on : ubuntu-latest
@@ -16,6 +16,7 @@ jobs:
       - name: Run test
         run: npm test
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps: 
       - name: Get Code
