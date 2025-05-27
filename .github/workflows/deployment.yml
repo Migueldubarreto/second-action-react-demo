@@ -1,5 +1,5 @@
-name: Test unit test
-on: [push, workflow_dispatch]
+name: Deploy Project
+on: [ push, workflow_dispatch ]
 # With needs forces to run one other the other one
 jobs:
   test: 
